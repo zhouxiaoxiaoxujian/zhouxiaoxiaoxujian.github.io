@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Jian Xu&#39; Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Jian Xu' Blog">
+<meta property="og:url" content="http://sharelittle.com/index.html">
+<meta property="og:site_name" content="Jian Xu' Blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jian Xu' Blog">
+  
+    <link rel="alternative" href="/atom.xml" title="Jian Xu&#39; Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="//favicon.png">
+  
+  <script src="/style.js"></script>
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Jian Xu</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">该走的路一步都不能少</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/随笔">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="#" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Jian Xu</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="null" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Jian Xu</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">该走的路一步都不能少</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        
+  
+    <article id="post-2016-04-05-configure" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/05/2016-04-05-configure/">编译选项的含义[host, build, target]</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Configure_with_—host,_—target_and_—build_options">Configure with —host, —target and —build options</h2><p>When people configure a project like ‘./configure’, man often meets these three confusing options, which are more related with cross-compilation</p>
+<ul>
+<li>—host: In which system the generated program will run.</li>
+<li>—build: In which system the program will be built.</li>
+<li>—target: this option is only used to build a cross-compiling toolchain. When the tool chain generates executable program, in which target system the program will run.</li>
+</ul>
+<p><strong>An example of tslib</strong> (a mouse driver library)</p>
+<pre><code>'./configure <span class="comment">--host=arm-linux --build=i686-pc-linux-gnu': </span>
+<span class="keyword">the</span> dynamically library <span class="keyword">is</span> built <span class="function_start"><span class="keyword">on</span></span> a x86 linux computer <span class="keyword">but</span> will be used <span class="keyword">for</span> a embedded arm linux system.
+</code></pre><p><strong>An example of gcc:</strong></p>
+<pre><code>'./configure <span class="comment">--target=i686-pc-linux-gnu --host=arm-linux --build=i686-pc-linux-gnu':</span>
+A gcc compiler <span class="keyword">is</span> build <span class="function_start"><span class="keyword">on</span></span> x86 linux computer. [<span class="comment">--build]</span>
+The gcc will be executed <span class="function_start"><span class="keyword">on</span></span> an embedded arm linux system.[<span class="comment">--host]</span>
+But <span class="keyword">the</span> gcc will generate <span class="keyword">the</span> binary program, which <span class="command">run</span> <span class="keyword">in</span> a x86 linux system. [<span class="comment">--target]</span>
+</code></pre><p>Reference:</p>
+<ol>
+<li><a href="http://jingfenghanmax.blogspot.co.uk/2010/09/configure-with-host-target-and-build.html" target="_blank" rel="external">Configure-with-host-target</a></li>
+<li><a href="https://gcc.gnu.org/onlinedocs/gccint/Configure-Terms.html" target="_blank" rel="external">GCC Configure Term</a></li>
+<li><a href="http://stackoverflow.com/questions/5139403/whats-the-difference-of-configure-option-build-host-and-target" target="_blank" rel="external">cross compiling</a></li>
+</ol>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/04/05/2016-04-05-configure/" class="archive-article-date">
+  	<time datetime="2016-04-05T10:29:49.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-04-05</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cross-compile/">cross compile</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2015-08-02-change-life" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/02/2015-08-02-change-life/">向生命探索</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我们每个人的生命都自成一个宇宙，高深莫测。 </p>
+<p>你永远不知道你的韧力有多强，<br>你的能力有多大，<br>你的潜力有多深，<br>你的耐力有多久。<br>你能要多少，用多少，爱多少，<br>付出多少，原谅多少，发挥多少，<br>你不知道，除非你尝试。</p>
+<p>生命犹如探险，<br>应该充满好奇心与挑战，<br>不断探索，不断研究，<br>不断努力，不断克服。<br>当然，这中间也要经历许多惊险<br>许多刺激，许多艰辛，许多试探，<br>许多重重困难的阻碍，<br>许多汗水与泪水的并流。<br>但是你也将因为不断的发现而欣喜<br>不断地磨练而刚强，<br>不断地因为登临新的里程和境界而拓展你生命的领域和深度。</p>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2015/08/02/2015-08-02-change-life/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2015/08/02/2015-08-02-change-life/" class="archive-article-date">
+  	<time datetime="2015-08-02T14:42:19.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-08-02</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/探索/">探索</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生命/">生命</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2015-07-28-ascii-table" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/28/2015-07-28-ascii-table/">ASCII字符表</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天无意中看到一个查看ASCII字符信息的网站，包含显示字符和控制字符的说明。纪录一下。</p>
+<p>参考:</p>
+<p>1.<a href="http://ascii-table.com/" target="_blank" rel="external">ASCII Table</a><br>2.<a href="http://ascii-table.com/ansi-escape-sequences.php" target="_blank" rel="external">ANSI Escape sequences</a></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2015/07/28/2015-07-28-ascii-table/" class="archive-article-date">
+  	<time datetime="2015-07-28T11:22:38.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-07-28</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASCII-Table/">ASCII Table</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Control-Char/">Control Char</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2015-07-26-debug-on-ios" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/26/2015-07-26-debug-on-ios/">ios远程调试</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装debugserver">安装debugserver</h2><p>ios默认是无法通过lldb调试的，默认只能通过xcode连接调试，有时候很不方便，能不能通过lldb远程连接调试呢？答案是可以的。</p>
+<p>下面以ios8.4为例，详细说明具体配置过程:</p>
+<ol>
+<li><p>首先iPhone需要越狱，越狱成功后安装OpenSSH服务。</p>
+</li>
+<li><p>安装ios8.4 SDK中的debugserver到iPhone上。</p>
+<pre><code>hdiutil attach <span class="regexp">/Applications/</span>Xcode.app<span class="regexp">/Contents/</span>Developer<span class="regexp">/Platforms/</span>iPhoneOS.platform<span class="regexp">/DeviceSupport/</span><span class="number">8.4</span>\ \(<span class="number">12</span>H141\)/DeveloperDiskImage.dmg
+
+cd <span class="regexp">/Volumes/</span>DeveloperDiskImage
+
+cp <span class="regexp">/usr/</span>bin/debugserver .
+</code></pre></li>
+</ol>
+<ol>
+<li><p>编写entitlements.plist配置文件。</p>
+<pre><code><span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="doctype">&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/ PropertyList-1.0.dtd"&gt;</span>
+<span class="tag">&lt;<span class="title">plist</span> <span class="attribute">version</span>=<span class="value">"1.0"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">dict</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">key</span>&gt;</span>com.apple.springboard.debugapplications<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">true</span>/&gt;</span>
+    <span class="tag">&lt;<span class="title">key</span>&gt;</span>run-unsigned-code<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">true</span>/&gt;</span>
+    <span class="tag">&lt;<span class="title">key</span>&gt;</span>get-task-allow<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">true</span>/&gt;</span>
+    <span class="tag">&lt;<span class="title">key</span>&gt;</span>task_for_pid-allow<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">true</span>/&gt;</span>
+<span class="tag">&lt;/<span class="title">dict</span>&gt;</span> 
+<span class="tag">&lt;/<span class="title">plist</span>&gt;</span>
+</code></pre></li>
+<li><p>使用codesign签名。</p>
+<pre><code>codesign <span class="operator">-s</span> - -- entitlements entitlements.plist <span class="operator">-f</span> debugserver
+</code></pre></li>
+<li><p>拷贝已签名的debugserver到iphone上。</p>
+<pre><code>scp /usr/bin/debugserver root<span class="variable">@192</span>.<span class="number">168.1</span>.<span class="number">2</span><span class="symbol">:/usr/bin/</span>
+</code></pre></li>
+</ol>
+<h2 id="调试程序">调试程序</h2><ol>
+<li><p>启动debugserver调试目标程序, debugserver支持直接启动程序和附加到程序进程进行调试，可以直接输入debugserver查看参数帮助。</p>
+<pre><code>export <span class="variable">$TARGET</span><span class="subst">=</span>/path/<span class="keyword">to</span>/target/<span class="keyword">on</span>/iphone
+
+ssh root@<span class="number">192.168</span><span class="built_in">.1</span><span class="built_in">.2</span> debugserver <span class="subst">*</span>:<span class="number">1234</span> <span class="variable">$TARGET</span>
+</code></pre></li>
+<li><p>启动lldb连接到远程debugserver开启的端口，进行调试。</p>
+<pre><code>lldb
+
+<span class="params">(lldb)</span>: platform select remote-ios
+
+<span class="params">(lldb)</span>: process connect connect:<span class="comment">//192.168.1.2:1234</span>
+</code></pre></li>
+<li><p>通过wifi连接调试很慢，也可以通过USB进行调试。</p>
+<blockquote>
+<ul>
+<li>安装usbmuxd。可以用来通过usb端口建立iphone的代理连接。</li>
+</ul>
+</blockquote>
+<pre><code><span class="keyword">brew </span>install usbmuxd
+</code></pre><blockquote>
+<ul>
+<li>把iphone线接到电脑上，然后启动代理连接。</li>
+</ul>
+</blockquote>
+<pre><code>iproxy <span class="number">1234 1234</span>
+</code></pre><blockquote>
+<ul>
+<li>现在我们可以直接连接到本地1234端口来进行调试。</li>
+</ul>
+</blockquote>
+<pre><code>lldb
+
+<span class="params">(lldb)</span>: platform select remote-ios
+
+<span class="params">(lldb)</span>: process connect connect:<span class="comment">//localhost:1234</span>
+</code></pre></li>
+</ol>
+<p>好了，进行享受lldb远程调试吧！</p>
+<p>参考:</p>
+<ol>
+<li><a href="http://iphonedevwiki.net/index.php/Debugserver" target="_blank" rel="external">iphonedevwiki-debugserver</a></li>
+</ol>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2015/07/26/2015-07-26-debug-on-ios/" class="archive-article-date">
+  	<time datetime="2015-07-26T13:42:51.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-07-26</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/debuger-调试/">debuger 调试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/remote-远程/">remote 远程</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2015-07-25-kext-sign-security" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/25/2015-07-25-kext-sign-security/">osx禁止验证kext签名的方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>自己写了kext后，如果没有apple developer账号，就可以使用osx禁止验证kext签名的方法。</p>
+<pre><code>sudo nvram <span class="variable">boot-args=</span><span class="variable">kext-dev-mode=</span><span class="number">1</span>
+</code></pre><p>取消禁止的方法。</p>
+<pre><code>sudo nvram -<span class="keyword">d</span> <span class="keyword">boot</span>-<span class="keyword">args</span>
+</code></pre><p>参考:</p>
+<ol>
+<li><a href="http://apple.stackexchange.com/questions/163059/how-can-i-disable-kext-signing-in-mac-os-x-10-10-yosemite" target="_blank" rel="external">Disable kext signing in</a></li>
+</ol>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2015/07/25/2015-07-25-kext-sign-security/" class="archive-article-date">
+  	<time datetime="2015-07-25T10:52:22.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-07-25</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code-sign/">code sign</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kext/">kext</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/osx/">osx</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2015-07-25-anti-debugger" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/25/2015-07-25-anti-debugger/">Mac osx常见反调试手段</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在软件发布后，你肯定不情愿你刚刚发布的软件就出现XXX破解版，而延长软件破解很重要的手段之一－－－阻止破解者对你的软件进行调试。<br>以下有几种常见的反调试手段:</p>
+<h3 id="1-_使用ptrace函数禁止附加调试,_ptrace函数的声明是:">1. 使用ptrace函数禁止附加调试, ptrace函数的声明是:</h3><pre><code><span class="function"><span class="keyword">int</span> <span class="title">ptrace</span><span class="params">(<span class="keyword">int</span> request, pid_t pid, caddr_t addr, <span class="keyword">int</span> data)</span></span>;
+
+参数request的值为PT_DENY_ATTACH时，即可禁止附加调试。
+
+
+    <span class="preprocessor">#<span class="keyword">include</span> &lt;sys/types.h&gt;</span>
+    <span class="preprocessor">#<span class="keyword">include</span> &lt;sys/ptrace.h&gt;</span>
+    <span class="preprocessor">#<span class="keyword">include</span> &lt;stdio.h&gt;</span>
+
+    <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *args[])</span> </span>{
+        ptrace(PT_DENY_ATTACH，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>)；
+        <span class="built_in">printf</span>(<span class="string">"Hello world\n"</span>);
+        <span class="keyword">return</span> <span class="number">0</span>;
+    }
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2015/07/25/2015-07-25-anti-debugger/" class="archive-article-date">
+  	<time datetime="2015-07-25T09:35:11.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-07-25</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/anti-debugger/">anti debugger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/osx/">osx</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2015-07-23-mac-app-change-default-language-setting" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/23/2015-07-23-mac-app-change-default-language-setting/">mac应用程序切换默认语言设置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近Mac上用Excel比较多，所有安装了最新Office for mac 2016, 由于系统语言是英文版的，所以打开Excel时，默认也是英文环境，用起来不是很方便，所以想能不能在修改系统语言设置下，让Excel启动在中文环境下。</p>
+<p>Mac应用程序和语言环境变量有以下三个。</p>
+<blockquote>
+<ul>
+<li><strong>AppleLanaugages</strong> 控制语言列表</li>
+<li><strong>AppleLocale</strong> 控制语言相关地区设置，包括日期、货币等相关格式</li>
+<li><strong>AppleCollationOrder</strong> 控制列表排序</li>
+</ul>
+</blockquote>
+<p>所以我们可以通过改变AppleLanaugages来设置App语言，下面是两种常见方法。</p>
+<ol>
+<li><p>启动Terminal, 使用defaults来改变软件语言设置。</p>
+<pre><code>defaults write com<span class="class">.microsoft</span><span class="class">.Excel</span> AppleLanguages -string <span class="string">"(zh-CN)"</span> <span class="comment">//修改设置</span>
+
+defaults delete com<span class="class">.microsoft</span><span class="class">.Excel</span> AppleLanguages <span class="comment">//删除设置</span>
+</code></pre></li>
+<li><p>通过软件来修改软件,如<a href="https://itunes.apple.com/us/app/app-language-chooser/id451732904" target="_blank" rel="external">App Language Chooser</a>、<a href="http://www.tj-hd.co.uk/en-gb/languageswitcher/" target="_blank" rel="external">languageswitcher</a>等等。</p>
+</li>
+</ol>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2015/07/23/2015-07-23-mac-app-change-default-language-setting/" class="archive-article-date">
+  	<time datetime="2015-07-23T08:14:51.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-07-23</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2015-07-18-yangduo-saying" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/18/2015-07-18-yangduo-saying/">杨绛先生送给年轻人的9句话</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.bing.com/knows/search?q=%E6%9D%A8%E7%BB%9B&amp;mkt=zh-cn&amp;FORM=BKACAI" target="_blank" rel="external">杨绛先生</a></p>
+<ol>
+<li><p>你的问题主要在于读书不多而想得太多。</p>
+</li>
+<li><p>如要锻炼一个能做大事的人，必定要叫他吃苦受累，百不称心，才能养成坚忍的性格。一个人经过不同程度的锻炼，就获得不同程度的修养，不同程度的效益。好比香料，捣得愈碎，磨得愈细，香得愈浓烈。</p>
+</li>
+<li><p>有些人之所以不断成长，就绝对是有一种坚持下去的力量。好读书，肯下功夫，不仅读，还做笔记。人要成长，必有原因，背后的努力与积累一定数倍于普通人。所以，关键还在于自己。</p>
+</li>
+<li><p>少年贪玩，青年迷恋爱情，壮年汲汲于成名成家，暮年自安于自欺欺人。人寿几何，顽铁能炼成的精金，能有多少？但不同程度的锻炼，必有不同程度的成绩；不同程度的纵欲放肆，必积下不同程度的顽劣。</p>
+</li>
+<li><p>在这物欲横流的人世间，人生一世实在是够苦。你存心做一个与世无争的老实人吧，人家就利用你欺侮你。你稍有才德品貌，人家就嫉妒你排挤你。你大度退让，人家就侵犯你损害你。你要不与人争，就得与世无求，同时还要维持实力准备斗争。你要和别人和平共处，就先得和他们周旋，还得准备随时吃亏。</p>
+</li>
+<li><p>惟有身处卑微的人，最有机缘看到世态人情的真相。一个人不想攀高就不怕下跌，也不用倾轧排挤，可以保其天真，成其自然，潜心一志完成自己能做的事。</p>
+</li>
+<li><p>上苍不会让所有幸福集中到某个人身上，得到爱情未必拥有金钱；拥有金钱未必得到快乐；得到快乐未必拥有健康；拥有健康未必一切都会如愿以偿。保持知足常乐的心态才是淬炼心智、净化心灵的最佳途径。一切快乐的享受都属于精神，这种快乐把忍受变为享受，是精神对于物质的胜利，这便是人生哲学。</p>
+</li>
+<li><p>我是一位老人，净说些老话。对于时代，我是落伍者，没有什么良言贡献给现代婚姻。只是在物质至上的时代潮流下，想提醒年轻的朋友，男女结合最最重要的是感情，双方互相理解的程度。理解深才能互相欣赏、吸引、支持和鼓励，两情相悦。门当户对及其他，并不重要。</p>
+</li>
+<li><p>我和谁都不争，和谁争我都不屑。简朴的生活、高贵的灵魂是人生的至高境界。</p>
+</li>
+</ol>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2015/07/18/2015-07-18-yangduo-saying/" class="archive-article-date">
+  	<time datetime="2015-07-18T01:09:47.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-07-18</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/名言/">名言</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2015-07-12-color-theory" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/12/2015-07-12-color-theory/">色彩理论(wiki摘要)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="色彩概述">色彩概述</h2><p>20世纪初色彩理论原则围绕着”纯的”或者说”理想”色彩而建立, 是用来描述感觉体验而非物理世界中色彩的属性。这导致原有的色彩理论原则并不能很好的适应现代的构想。</p>
+<p>主要有下面3个问题:</p>
+<ol>
+<li><p>色光混合(加色法)和色料混合(减色法)之间行为的困惑。这个困惑在于材料对光的吸收和眼睛对光的感知遵循不同的规则。</p>
+</li>
+<li><p>在描述从一个表面(如油漆或颜料)反射出来的色彩产生强烈亮度对比度这个重要效果时, 色料混合和色光混合是截然相反的; 色彩如棕色(browns)或赭色(ochres)无法出现在色光混合中。因此，中间值的黄色油漆和周围的亮白色之间的强烈亮度对比使得黄色呈现出绿色或棕色，而彩虹和周围的天空之间的强烈亮度对比使得黄色在彩虹中出现微弱的黄色或白色。</p>
+</li>
+<li><p>精确的描述色彩效果的需要。当大多数色彩效果都能以三个相对属性来定义反差时，就能以如”黄色”和”蓝色”之间反差构思出更通用的色彩。</p>
+<blockquote>
+<ul>
+<li><strong>亮度(lightness)</strong>[light vs. dark, or white vs. black]</li>
+<li><strong>饱和度(saturation)</strong>[intense vs. dull)]</li>
+<li><strong>色相(hue)</strong>(如red, orange, yellow, green, blue or purple)</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<p>这些问题一直到19世纪末也没有解决。</p>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2015/07/12/2015-07-12-color-theory/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2015/07/12/2015-07-12-color-theory/" class="archive-article-date">
+  	<time datetime="2015-07-12T03:16:34.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-07-12</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Color/">Color</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HSB/">HSB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HSV/">HSV</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RGB/">RGB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RYB/">RYB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/色彩空间/">色彩空间</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2014-10-18-Git-merge-maste-to-others" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/18/2014-10-18-Git-merge-maste-to-others/">Git将一个分支的提交合并到其他分支</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Git_merge_dev_to_release-N">Git merge dev to release-N</h1><h2 id="问题:">问题:</h2><p>你有4个不同分支，dev, release-1, release-2, release-3, release-4, 你想把dev分支上所做的提交合并到release-x分支上，以便所有release-x分支都能获得最新的dev提交.</p>
+<h3 id="方案一:_checkout每个目标分支，然后并入dev分支提交-">方案一: checkout每个目标分支，然后并入dev分支提交.</h3><pre><code>git checkout <span class="operator"><span class="keyword">release</span>-<span class="number">1</span>
+git <span class="keyword">merge</span> dev
+
+git checkout <span class="keyword">release</span>-<span class="number">2</span>
+git <span class="keyword">merge</span> dev
+
+...
+git checkout <span class="keyword">release</span>-N
+git <span class="keyword">merge</span> dev</span>
+</code></pre><h3 id="方案二:_建立一个目标指向自己的远程仓库,_通过推送来一次更新所有release-x">方案二: 建立一个目标指向自己的远程仓库, 通过推送来一次更新所有release-x</h3>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2014/10/18/2014-10-18-Git-merge-maste-to-others/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2014/10/18/2014-10-18-Git-merge-maste-to-others/" class="archive-article-date">
+  	<time datetime="2014-10-18T06:04:09.000Z" itemprop="datePublished"><i class="icon-clock"></i>2014-10-18</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Jian Xu
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: true,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/AIR/" style="font-size: 10px;">AIR</a> <a href="/tags/ASCII-Table/" style="font-size: 10px;">ASCII Table</a> <a href="/tags/ActionScript3/" style="font-size: 10px;">ActionScript3</a> <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Color/" style="font-size: 10px;">Color</a> <a href="/tags/Control-Char/" style="font-size: 10px;">Control Char</a> <a href="/tags/HSB/" style="font-size: 10px;">HSB</a> <a href="/tags/HSV/" style="font-size: 10px;">HSV</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/OOP/" style="font-size: 10px;">OOP</a> <a href="/tags/RGB/" style="font-size: 10px;">RGB</a> <a href="/tags/RYB/" style="font-size: 10px;">RYB</a> <a href="/tags/anti-debugger/" style="font-size: 10px;">anti debugger</a> <a href="/tags/code-sign/" style="font-size: 10px;">code sign</a> <a href="/tags/cross-compile/" style="font-size: 10px;">cross compile</a> <a href="/tags/debuger-调试/" style="font-size: 10px;">debuger 调试</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/kext/" style="font-size: 10px;">kext</a> <a href="/tags/osx/" style="font-size: 15px;">osx</a> <a href="/tags/remote-远程/" style="font-size: 10px;">remote 远程</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/名言/" style="font-size: 10px;">名言</a> <a href="/tags/探索/" style="font-size: 10px;">探索</a> <a href="/tags/生命/" style="font-size: 10px;">生命</a> <a href="/tags/色彩空间/" style="font-size: 10px;">色彩空间</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

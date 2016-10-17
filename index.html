@@ -166,14 +166,17 @@
 <li>—target: this option is only used to build a cross-compiling toolchain. When the tool chain generates executable program, in which target system the program will run.</li>
 </ul>
 <p><strong>An example of tslib</strong> (a mouse driver library)</p>
-<pre><code>'./configure <span class="comment">--host=arm-linux --build=i686-pc-linux-gnu': </span>
-<span class="keyword">the</span> dynamically library <span class="keyword">is</span> built <span class="function_start"><span class="keyword">on</span></span> a x86 linux computer <span class="keyword">but</span> will be used <span class="keyword">for</span> a embedded arm linux system.
-</code></pre><p><strong>An example of gcc:</strong></p>
-<pre><code>'./configure <span class="comment">--target=i686-pc-linux-gnu --host=arm-linux --build=i686-pc-linux-gnu':</span>
-A gcc compiler <span class="keyword">is</span> build <span class="function_start"><span class="keyword">on</span></span> x86 linux computer. [<span class="comment">--build]</span>
-The gcc will be executed <span class="function_start"><span class="keyword">on</span></span> an embedded arm linux system.[<span class="comment">--host]</span>
-But <span class="keyword">the</span> gcc will generate <span class="keyword">the</span> binary program, which <span class="command">run</span> <span class="keyword">in</span> a x86 linux system. [<span class="comment">--target]</span>
-</code></pre><p>Reference:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./configure --host=arm-linux --build=i686-pc-linux-gnu:</div></pre></td></tr></table></figure>
+<blockquote>
+<p>the dynamically library is built on a x86 linux computer but will be used for a embedded arm linux system.</p>
+</blockquote>
+<p><strong>An example of gcc:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./configure --target=i686-pc-linux-gnu --host=arm-linux --build=i686-pc-linux-gnu:</div></pre></td></tr></table></figure>
+<blockquote>
+<p>A gcc compiler is build on x86 linux computer. <strong>[—build]</strong><br>The gcc will be executed on an embedded arm linux system. <strong>[—host]</strong><br>But the gcc will generate the binary program, which run in a x86 linux system. <strong>[—target]</strong></p>
+</blockquote>
+<hr>
+<p>Reference:</p>
 <ol>
 <li><a href="http://jingfenghanmax.blogspot.co.uk/2010/09/configure-with-host-target-and-build.html" target="_blank" rel="external">Configure-with-host-target</a></li>
 <li><a href="https://gcc.gnu.org/onlinedocs/gccint/Configure-Terms.html" target="_blank" rel="external">GCC Configure Term</a></li>
@@ -191,60 +194,6 @@ But <span class="keyword">the</span> gcc will generate <span class="keyword">the
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cross-compile/">cross compile</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-2015-08-02-change-life" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/02/2015-08-02-change-life/">向生命探索</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我们每个人的生命都自成一个宇宙，高深莫测。 </p>
-<p>你永远不知道你的韧力有多强，<br>你的能力有多大，<br>你的潜力有多深，<br>你的耐力有多久。<br>你能要多少，用多少，爱多少，<br>付出多少，原谅多少，发挥多少，<br>你不知道，除非你尝试。</p>
-<p>生命犹如探险，<br>应该充满好奇心与挑战，<br>不断探索，不断研究，<br>不断努力，不断克服。<br>当然，这中间也要经历许多惊险<br>许多刺激，许多艰辛，许多试探，<br>许多重重困难的阻碍，<br>许多汗水与泪水的并流。<br>但是你也将因为不断的发现而欣喜<br>不断地磨练而刚强，<br>不断地因为登临新的里程和境界而拓展你生命的领域和深度。</p>
-        <p class="article-more-link">
-          <a class="article-more-a"  href="/2015/08/02/2015-08-02-change-life/#more">more >></a>
-        </p>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2015/08/02/2015-08-02-change-life/" class="archive-article-date">
-  	<time datetime="2015-08-02T14:42:19.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-08-02</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/探索/">探索</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生命/">生命</a></li></ul>
 	</div>
 
       
@@ -282,9 +231,11 @@ But <span class="keyword">the</span> gcc will generate <span class="keyword">the
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天无意中看到一个查看ASCII字符信息的网站，包含显示字符和控制字符的说明。纪录一下。</p>
-<p>参考:</p>
-<p>1.<a href="http://ascii-table.com/" target="_blank" rel="external">ASCII Table</a><br>2.<a href="http://ascii-table.com/ansi-escape-sequences.php" target="_blank" rel="external">ANSI Escape sequences</a></p>
+        <h2 id="今天无意中看到一个查看ASCII字符信息的网站，包含显示字符和控制字符的说明。纪录一下。">今天无意中看到一个查看ASCII字符信息的网站，包含显示字符和控制字符的说明。纪录一下。</h2><p>参考:</p>
+<ol>
+<li><a href="http://ascii-table.com/" target="_blank" rel="external">ASCII Table</a></li>
+<li><a href="http://ascii-table.com/ansi-escape-sequences.php" target="_blank" rel="external">ANSI Escape sequences</a></li>
+</ol>
 
       
     </div>
@@ -334,83 +285,43 @@ But <span class="keyword">the</span> gcc will generate <span class="keyword">the
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="安装debugserver">安装debugserver</h2><p>ios默认是无法通过lldb调试的，默认只能通过xcode连接调试，有时候很不方便，能不能通过lldb远程连接调试呢？答案是可以的。</p>
-<p>下面以ios8.4为例，详细说明具体配置过程:</p>
+        <h2 id="安装debugserver">安装debugserver</h2><p>ios默认是无法通过lldb调试的，默认只能通过xcode连接调试，有时候很不方便，能不能通过lldb远程连接调试呢？答案是可以的。<br>下面以ios8.4为例，详细说明具体配置过程:</p>
 <ol>
-<li><p>首先iPhone需要越狱，越狱成功后安装OpenSSH服务。</p>
-</li>
-<li><p>安装ios8.4 SDK中的debugserver到iPhone上。</p>
-<pre><code>hdiutil attach <span class="regexp">/Applications/</span>Xcode.app<span class="regexp">/Contents/</span>Developer<span class="regexp">/Platforms/</span>iPhoneOS.platform<span class="regexp">/DeviceSupport/</span><span class="number">8.4</span>\ \(<span class="number">12</span>H141\)/DeveloperDiskImage.dmg
-
-cd <span class="regexp">/Volumes/</span>DeveloperDiskImage
-
-cp <span class="regexp">/usr/</span>bin/debugserver .
-</code></pre></li>
+<li>首先iPhone需要越狱，越狱成功后安装OpenSSH服务。</li>
+<li>安装ios8.4 SDK中的debugserver到iPhone上。</li>
+<li>编写entitlements.plist配置文件。</li>
 </ol>
+<figure class="highlight xml"><figcaption><span>entitlements.plist</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line"><span class="meta">&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/ PropertyList-1.0.dtd"&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">plist</span> <span class="attr">version</span>=<span class="string">"1.0"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>com.apple.springboard.debugapplications<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>run-unsigned-code<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>get-task-allow<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>task_for_pid-allow<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span> </div><div class="line"><span class="tag">&lt;/<span class="name">plist</span>&gt;</span></div></pre></td></tr></table></figure>
 <ol>
-<li><p>编写entitlements.plist配置文件。</p>
-<pre><code><span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="doctype">&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/ PropertyList-1.0.dtd"&gt;</span>
-<span class="tag">&lt;<span class="title">plist</span> <span class="attribute">version</span>=<span class="value">"1.0"</span>&gt;</span>
-<span class="tag">&lt;<span class="title">dict</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">key</span>&gt;</span>com.apple.springboard.debugapplications<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">true</span>/&gt;</span>
-    <span class="tag">&lt;<span class="title">key</span>&gt;</span>run-unsigned-code<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">true</span>/&gt;</span>
-    <span class="tag">&lt;<span class="title">key</span>&gt;</span>get-task-allow<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">true</span>/&gt;</span>
-    <span class="tag">&lt;<span class="title">key</span>&gt;</span>task_for_pid-allow<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">true</span>/&gt;</span>
-<span class="tag">&lt;/<span class="title">dict</span>&gt;</span> 
-<span class="tag">&lt;/<span class="title">plist</span>&gt;</span>
-</code></pre></li>
-<li><p>使用codesign签名。</p>
-<pre><code>codesign <span class="operator">-s</span> - -- entitlements entitlements.plist <span class="operator">-f</span> debugserver
-</code></pre></li>
-<li><p>拷贝已签名的debugserver到iphone上。</p>
-<pre><code>scp /usr/bin/debugserver root<span class="variable">@192</span>.<span class="number">168.1</span>.<span class="number">2</span><span class="symbol">:/usr/bin/</span>
-</code></pre></li>
+<li>使用codesign签名。</li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">codesign <span class="_">-s</span> - -- entitlements entitlements.plist <span class="_">-f</span> debugserver</div></pre></td></tr></table></figure>
+<ol>
+<li>拷贝已签名的debugserver到iphone上。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp /usr/bin/debugserver root@192.168.1.2:/usr/bin/</div></pre></td></tr></table></figure>
 <h2 id="调试程序">调试程序</h2><ol>
-<li><p>启动debugserver调试目标程序, debugserver支持直接启动程序和附加到程序进程进行调试，可以直接输入debugserver查看参数帮助。</p>
-<pre><code>export <span class="variable">$TARGET</span><span class="subst">=</span>/path/<span class="keyword">to</span>/target/<span class="keyword">on</span>/iphone
-
-ssh root@<span class="number">192.168</span><span class="built_in">.1</span><span class="built_in">.2</span> debugserver <span class="subst">*</span>:<span class="number">1234</span> <span class="variable">$TARGET</span>
-</code></pre></li>
-<li><p>启动lldb连接到远程debugserver开启的端口，进行调试。</p>
-<pre><code>lldb
-
-<span class="params">(lldb)</span>: platform select remote-ios
-
-<span class="params">(lldb)</span>: process connect connect:<span class="comment">//192.168.1.2:1234</span>
-</code></pre></li>
-<li><p>通过wifi连接调试很慢，也可以通过USB进行调试。</p>
-<blockquote>
-<ul>
-<li>安装usbmuxd。可以用来通过usb端口建立iphone的代理连接。</li>
-</ul>
-</blockquote>
-<pre><code><span class="keyword">brew </span>install usbmuxd
-</code></pre><blockquote>
-<ul>
-<li>把iphone线接到电脑上，然后启动代理连接。</li>
-</ul>
-</blockquote>
-<pre><code>iproxy <span class="number">1234 1234</span>
-</code></pre><blockquote>
-<ul>
-<li>现在我们可以直接连接到本地1234端口来进行调试。</li>
-</ul>
-</blockquote>
-<pre><code>lldb
-
-<span class="params">(lldb)</span>: platform select remote-ios
-
-<span class="params">(lldb)</span>: process connect connect:<span class="comment">//localhost:1234</span>
-</code></pre></li>
+<li>启动debugserver调试目标程序, debugserver支持直接启动程序和附加到程序进程进行调试，可以直接输入debugserver查看参数帮助。</li>
 </ol>
-<p>好了，进行享受lldb远程调试吧！</p>
-<p>参考:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> <span class="variable">$TARGET</span>=/path/to/target/on/iphone</div><div class="line">ssh root@192.168.1.2 debugserver \*:1234 <span class="variable">$TARGET</span></div></pre></td></tr></table></figure>
+<ol>
+<li>启动lldb连接到远程debugserver开启的端口，进行调试。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">lldb</div><div class="line">(lldb): platform select remote-ios</div><div class="line">(lldb): process connect connect://192.168.1.2:1234</div></pre></td></tr></table></figure>
+<ol>
+<li>通过wifi连接调试很慢，也可以通过USB进行调试。</li>
+<li>安装usbmuxd。可以用来通过usb端口建立iphone的代理连接。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install usbmuxd</div></pre></td></tr></table></figure>
+<ol>
+<li>把iphone线接到电脑上，然后启动代理连接。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iproxy 1234 1234</div></pre></td></tr></table></figure>
+<ol>
+<li>现在我们可以直接连接到本地1234端口来进行调试。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">lldb</div><div class="line">(lldb): platform select remote-ios</div><div class="line">(lldb): process connect connect://localhost:1234</div></pre></td></tr></table></figure>
+<h2 id="好了，进行享受lldb远程调试吧！">好了，进行享受lldb远程调试吧！</h2><p>参考:</p>
 <ol>
 <li><a href="http://iphonedevwiki.net/index.php/Debugserver" target="_blank" rel="external">iphonedevwiki-debugserver</a></li>
 </ol>
@@ -464,10 +375,11 @@ ssh root@<span class="number">192.168</span><span class="built_in">.1</span><spa
     <div class="article-entry" itemprop="articleBody">
       
         <p>自己写了kext后，如果没有apple developer账号，就可以使用osx禁止验证kext签名的方法。</p>
-<pre><code>sudo nvram <span class="variable">boot-args=</span><span class="variable">kext-dev-mode=</span><span class="number">1</span>
-</code></pre><p>取消禁止的方法。</p>
-<pre><code>sudo nvram -<span class="keyword">d</span> <span class="keyword">boot</span>-<span class="keyword">args</span>
-</code></pre><p>参考:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nvram boot-args=kext-dev-mode=1</div></pre></td></tr></table></figure>
+<p>取消禁止的方法。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nvram <span class="_">-d</span> boot-args</div></pre></td></tr></table></figure>
+<hr>
+<p>参考:</p>
 <ol>
 <li><a href="http://apple.stackexchange.com/questions/163059/how-can-i-disable-kext-signing-in-mac-os-x-10-10-yosemite" target="_blank" rel="external">Disable kext signing in</a></li>
 </ol>
@@ -520,22 +432,12 @@ ssh root@<span class="number">192.168</span><span class="built_in">.1</span><spa
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在软件发布后，你肯定不情愿你刚刚发布的软件就出现XXX破解版，而延长软件破解很重要的手段之一－－－阻止破解者对你的软件进行调试。<br>以下有几种常见的反调试手段:</p>
-<h3 id="1-_使用ptrace函数禁止附加调试,_ptrace函数的声明是:">1. 使用ptrace函数禁止附加调试, ptrace函数的声明是:</h3><pre><code><span class="function"><span class="keyword">int</span> <span class="title">ptrace</span><span class="params">(<span class="keyword">int</span> request, pid_t pid, caddr_t addr, <span class="keyword">int</span> data)</span></span>;
-
-参数request的值为PT_DENY_ATTACH时，即可禁止附加调试。
-
-
-    <span class="preprocessor">#<span class="keyword">include</span> &lt;sys/types.h&gt;</span>
-    <span class="preprocessor">#<span class="keyword">include</span> &lt;sys/ptrace.h&gt;</span>
-    <span class="preprocessor">#<span class="keyword">include</span> &lt;stdio.h&gt;</span>
-
-    <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *args[])</span> </span>{
-        ptrace(PT_DENY_ATTACH，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>)；
-        <span class="built_in">printf</span>(<span class="string">"Hello world\n"</span>);
-        <span class="keyword">return</span> <span class="number">0</span>;
-    }
-</code></pre>
+        <p>在软件发布后，你肯定不情愿你刚刚发布的软件就出现XXX破解版，而延长软件破解很重要的手段之一—阻止破解者对你的软件进行调试。</p>
+<p>以下有几种常见的反调试手段:</p>
+<ol>
+<li>使用ptrace函数禁止附加调试, ptrace函数的声明是:</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">ptrace</span><span class="params">(<span class="keyword">int</span> request, <span class="keyword">pid_t</span> pid, <span class="keyword">caddr_t</span> addr, <span class="keyword">int</span> data)</span></span>;</div><div class="line"><span class="comment">//参数request的值为PT_DENY_ATTACH时，即可禁止附加调试。</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/types.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/ptrace.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *args[])</span> </span>&#123;</div><div class="line">	ptrace(PT_DENY_ATTACH，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>)；</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"Hello world\n"</span>);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     <div class="article-info article-info-index">
@@ -547,139 +449,6 @@ ssh root@<span class="number">192.168</span><span class="built_in">.1</span><spa
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/anti-debugger/">anti debugger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/osx/">osx</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-2015-07-23-mac-app-change-default-language-setting" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/23/2015-07-23-mac-app-change-default-language-setting/">mac应用程序切换默认语言设置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近Mac上用Excel比较多，所有安装了最新Office for mac 2016, 由于系统语言是英文版的，所以打开Excel时，默认也是英文环境，用起来不是很方便，所以想能不能在修改系统语言设置下，让Excel启动在中文环境下。</p>
-<p>Mac应用程序和语言环境变量有以下三个。</p>
-<blockquote>
-<ul>
-<li><strong>AppleLanaugages</strong> 控制语言列表</li>
-<li><strong>AppleLocale</strong> 控制语言相关地区设置，包括日期、货币等相关格式</li>
-<li><strong>AppleCollationOrder</strong> 控制列表排序</li>
-</ul>
-</blockquote>
-<p>所以我们可以通过改变AppleLanaugages来设置App语言，下面是两种常见方法。</p>
-<ol>
-<li><p>启动Terminal, 使用defaults来改变软件语言设置。</p>
-<pre><code>defaults write com<span class="class">.microsoft</span><span class="class">.Excel</span> AppleLanguages -string <span class="string">"(zh-CN)"</span> <span class="comment">//修改设置</span>
-
-defaults delete com<span class="class">.microsoft</span><span class="class">.Excel</span> AppleLanguages <span class="comment">//删除设置</span>
-</code></pre></li>
-<li><p>通过软件来修改软件,如<a href="https://itunes.apple.com/us/app/app-language-chooser/id451732904" target="_blank" rel="external">App Language Chooser</a>、<a href="http://www.tj-hd.co.uk/en-gb/languageswitcher/" target="_blank" rel="external">languageswitcher</a>等等。</p>
-</li>
-</ol>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2015/07/23/2015-07-23-mac-app-change-default-language-setting/" class="archive-article-date">
-  	<time datetime="2015-07-23T08:14:51.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-07-23</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-2015-07-18-yangduo-saying" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/18/2015-07-18-yangduo-saying/">杨绛先生送给年轻人的9句话</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://www.bing.com/knows/search?q=%E6%9D%A8%E7%BB%9B&amp;mkt=zh-cn&amp;FORM=BKACAI" target="_blank" rel="external">杨绛先生</a></p>
-<ol>
-<li><p>你的问题主要在于读书不多而想得太多。</p>
-</li>
-<li><p>如要锻炼一个能做大事的人，必定要叫他吃苦受累，百不称心，才能养成坚忍的性格。一个人经过不同程度的锻炼，就获得不同程度的修养，不同程度的效益。好比香料，捣得愈碎，磨得愈细，香得愈浓烈。</p>
-</li>
-<li><p>有些人之所以不断成长，就绝对是有一种坚持下去的力量。好读书，肯下功夫，不仅读，还做笔记。人要成长，必有原因，背后的努力与积累一定数倍于普通人。所以，关键还在于自己。</p>
-</li>
-<li><p>少年贪玩，青年迷恋爱情，壮年汲汲于成名成家，暮年自安于自欺欺人。人寿几何，顽铁能炼成的精金，能有多少？但不同程度的锻炼，必有不同程度的成绩；不同程度的纵欲放肆，必积下不同程度的顽劣。</p>
-</li>
-<li><p>在这物欲横流的人世间，人生一世实在是够苦。你存心做一个与世无争的老实人吧，人家就利用你欺侮你。你稍有才德品貌，人家就嫉妒你排挤你。你大度退让，人家就侵犯你损害你。你要不与人争，就得与世无求，同时还要维持实力准备斗争。你要和别人和平共处，就先得和他们周旋，还得准备随时吃亏。</p>
-</li>
-<li><p>惟有身处卑微的人，最有机缘看到世态人情的真相。一个人不想攀高就不怕下跌，也不用倾轧排挤，可以保其天真，成其自然，潜心一志完成自己能做的事。</p>
-</li>
-<li><p>上苍不会让所有幸福集中到某个人身上，得到爱情未必拥有金钱；拥有金钱未必得到快乐；得到快乐未必拥有健康；拥有健康未必一切都会如愿以偿。保持知足常乐的心态才是淬炼心智、净化心灵的最佳途径。一切快乐的享受都属于精神，这种快乐把忍受变为享受，是精神对于物质的胜利，这便是人生哲学。</p>
-</li>
-<li><p>我是一位老人，净说些老话。对于时代，我是落伍者，没有什么良言贡献给现代婚姻。只是在物质至上的时代潮流下，想提醒年轻的朋友，男女结合最最重要的是感情，双方互相理解的程度。理解深才能互相欣赏、吸引、支持和鼓励，两情相悦。门当户对及其他，并不重要。</p>
-</li>
-<li><p>我和谁都不争，和谁争我都不屑。简朴的生活、高贵的灵魂是人生的至高境界。</p>
-</li>
-</ol>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2015/07/18/2015-07-18-yangduo-saying/" class="archive-article-date">
-  	<time datetime="2015-07-18T01:09:47.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-07-18</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/名言/">名言</a></li></ul>
 	</div>
 
       
@@ -787,16 +556,8 @@ defaults delete com<span class="class">.microsoft</span><span class="class">.Exc
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Git_merge_dev_to_release-N">Git merge dev to release-N</h1><h2 id="问题:">问题:</h2><p>你有4个不同分支，dev, release-1, release-2, release-3, release-4, 你想把dev分支上所做的提交合并到release-x分支上，以便所有release-x分支都能获得最新的dev提交.</p>
-<h3 id="方案一:_checkout每个目标分支，然后并入dev分支提交-">方案一: checkout每个目标分支，然后并入dev分支提交.</h3><pre><code>git checkout <span class="operator"><span class="keyword">release</span>-<span class="number">1</span>
-git <span class="keyword">merge</span> dev
-
-git checkout <span class="keyword">release</span>-<span class="number">2</span>
-git <span class="keyword">merge</span> dev
-
-...
-git checkout <span class="keyword">release</span>-N
-git <span class="keyword">merge</span> dev</span>
-</code></pre><h3 id="方案二:_建立一个目标指向自己的远程仓库,_通过推送来一次更新所有release-x">方案二: 建立一个目标指向自己的远程仓库, 通过推送来一次更新所有release-x</h3>
+<h3 id="方案一:_checkout每个目标分支，然后并入dev分支提交-">方案一: checkout每个目标分支，然后并入dev分支提交.</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">git checkout release-1</div><div class="line">git merge dev</div><div class="line">git checkout release-2</div><div class="line">git merge dev</div><div class="line">...</div><div class="line">git checkout release-N</div><div class="line">git merge dev</div></pre></td></tr></table></figure>
+<h3 id="方案二:_建立一个目标指向自己的远程仓库,_通过推送来一次更新所有release-x">方案二: 建立一个目标指向自己的远程仓库, 通过推送来一次更新所有release-x</h3>
         <p class="article-more-link">
           <a class="article-more-a"  href="/2014/10/18/2014-10-18-Git-merge-maste-to-others/#more">more >></a>
         </p>
@@ -811,6 +572,156 @@ git <span class="keyword">merge</span> dev</span>
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2014-09-24-jarsigner" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/09/24/2014-09-24-jarsigner/">jarsigner for apk use jdk 1.7</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>jarsigner -verbose -keystore xxxx -signedjar xxx -digestalg SHA1 -sigalg MD5withRSA xxxx <span class="type">alias</span>
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2014/09/24/2014-09-24-jarsigner/" class="archive-article-date">
+  	<time datetime="2014-09-24T15:52:32.000Z" itemprop="datePublished"><i class="icon-clock"></i>2014-09-24</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2013-09-17-android_rsa_info" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/09/17/2013-09-17-android_rsa_info/">Android_RSA_INFO</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>openssl pkcs7 -inform DER -<span class="keyword">in</span> automanage/META-INF/CERT<span class="class">.RSA</span> -noout -print_certs -text
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2013/09/17/2013-09-17-android_rsa_info/" class="archive-article-date">
+  	<time datetime="2013-09-16T16:38:26.000Z" itemprop="datePublished"><i class="icon-clock"></i>2013-09-17</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2013-09-17-p12_cerificate" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/09/17/2013-09-17-p12_cerificate/">Getting your keystore from a p12 cerificate</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>keytool -importkeystore -srckeystore savagelook<span class="class">.p12</span> -destkeystore savagelook<span class="class">.keystore</span> -srcstoretype pkcs12
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2013/09/17/2013-09-17-p12_cerificate/" class="archive-article-date">
+  	<time datetime="2013-09-16T16:01:09.000Z" itemprop="datePublished"><i class="icon-clock"></i>2013-09-17</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
 	</div>
 
       
@@ -895,29 +806,13 @@ git <span class="keyword">merge</span> dev</span>
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/AIR/" style="font-size: 10px;">AIR</a> <a href="/tags/ASCII-Table/" style="font-size: 10px;">ASCII Table</a> <a href="/tags/ActionScript3/" style="font-size: 10px;">ActionScript3</a> <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Color/" style="font-size: 10px;">Color</a> <a href="/tags/Control-Char/" style="font-size: 10px;">Control Char</a> <a href="/tags/HSB/" style="font-size: 10px;">HSB</a> <a href="/tags/HSV/" style="font-size: 10px;">HSV</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/OOP/" style="font-size: 10px;">OOP</a> <a href="/tags/RGB/" style="font-size: 10px;">RGB</a> <a href="/tags/RYB/" style="font-size: 10px;">RYB</a> <a href="/tags/anti-debugger/" style="font-size: 10px;">anti debugger</a> <a href="/tags/code-sign/" style="font-size: 10px;">code sign</a> <a href="/tags/cross-compile/" style="font-size: 10px;">cross compile</a> <a href="/tags/debuger-调试/" style="font-size: 10px;">debuger 调试</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/kext/" style="font-size: 10px;">kext</a> <a href="/tags/osx/" style="font-size: 15px;">osx</a> <a href="/tags/remote-远程/" style="font-size: 10px;">remote 远程</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/名言/" style="font-size: 10px;">名言</a> <a href="/tags/探索/" style="font-size: 10px;">探索</a> <a href="/tags/生命/" style="font-size: 10px;">生命</a> <a href="/tags/色彩空间/" style="font-size: 10px;">色彩空间</a>
+    				<a href="/tags/AIR/" style="font-size: 10px;">AIR</a> <a href="/tags/ASCII-Table/" style="font-size: 10px;">ASCII Table</a> <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Color/" style="font-size: 10px;">Color</a> <a href="/tags/Control-Char/" style="font-size: 10px;">Control Char</a> <a href="/tags/HSB/" style="font-size: 10px;">HSB</a> <a href="/tags/HSV/" style="font-size: 10px;">HSV</a> <a href="/tags/RGB/" style="font-size: 10px;">RGB</a> <a href="/tags/RYB/" style="font-size: 10px;">RYB</a> <a href="/tags/anti-debugger/" style="font-size: 10px;">anti debugger</a> <a href="/tags/code-sign/" style="font-size: 10px;">code sign</a> <a href="/tags/cross-compile/" style="font-size: 10px;">cross compile</a> <a href="/tags/debuger-调试/" style="font-size: 10px;">debuger 调试</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/kext/" style="font-size: 10px;">kext</a> <a href="/tags/osx/" style="font-size: 15px;">osx</a> <a href="/tags/remote-远程/" style="font-size: 10px;">remote 远程</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/色彩空间/" style="font-size: 10px;">色彩空间</a>
     			</div>
     	</section>
     
 
     
     	<section class="tools-section tools-section-friends">
-  		
-  			<div class="friends-wrap" id="js-friends">
-  			
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
-  	        
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
-  	        
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
-  	        
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
-  	        
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
-  	        
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
-  	        
-  	        </div>
   		
     	</section>
     

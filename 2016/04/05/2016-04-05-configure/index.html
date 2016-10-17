@@ -16,7 +16,7 @@
 <meta property="og:description" content="Configure with —host, —target and —build optionsWhen people configure a project like ‘./configure’, man often meets these three confusing options, which are more related with cross-compilation
 
 —host:">
-<meta property="og:updated_time" content="2016-04-05T10:32:41.000Z">
+<meta property="og:updated_time" content="2016-10-15T08:45:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编译选项的含义[host, build, target]">
 <meta name="twitter:description" content="Configure with —host, —target and —build optionsWhen people configure a project like ‘./configure’, man often meets these three confusing options, which are more related with cross-compilation
@@ -174,14 +174,17 @@
 <li>—target: this option is only used to build a cross-compiling toolchain. When the tool chain generates executable program, in which target system the program will run.</li>
 </ul>
 <p><strong>An example of tslib</strong> (a mouse driver library)</p>
-<pre><code>'./configure <span class="comment">--host=arm-linux --build=i686-pc-linux-gnu': </span>
-<span class="keyword">the</span> dynamically library <span class="keyword">is</span> built <span class="function_start"><span class="keyword">on</span></span> a x86 linux computer <span class="keyword">but</span> will be used <span class="keyword">for</span> a embedded arm linux system.
-</code></pre><p><strong>An example of gcc:</strong></p>
-<pre><code>'./configure <span class="comment">--target=i686-pc-linux-gnu --host=arm-linux --build=i686-pc-linux-gnu':</span>
-A gcc compiler <span class="keyword">is</span> build <span class="function_start"><span class="keyword">on</span></span> x86 linux computer. [<span class="comment">--build]</span>
-The gcc will be executed <span class="function_start"><span class="keyword">on</span></span> an embedded arm linux system.[<span class="comment">--host]</span>
-But <span class="keyword">the</span> gcc will generate <span class="keyword">the</span> binary program, which <span class="command">run</span> <span class="keyword">in</span> a x86 linux system. [<span class="comment">--target]</span>
-</code></pre><p>Reference:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./configure --host=arm-linux --build=i686-pc-linux-gnu:</div></pre></td></tr></table></figure>
+<blockquote>
+<p>the dynamically library is built on a x86 linux computer but will be used for a embedded arm linux system.</p>
+</blockquote>
+<p><strong>An example of gcc:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./configure --target=i686-pc-linux-gnu --host=arm-linux --build=i686-pc-linux-gnu:</div></pre></td></tr></table></figure>
+<blockquote>
+<p>A gcc compiler is build on x86 linux computer. <strong>[—build]</strong><br>The gcc will be executed on an embedded arm linux system. <strong>[—host]</strong><br>But the gcc will generate the binary program, which run in a x86 linux system. <strong>[—target]</strong></p>
+</blockquote>
+<hr>
+<p>Reference:</p>
 <ol>
 <li><a href="http://jingfenghanmax.blogspot.co.uk/2010/09/configure-with-host-target-and-build.html" target="_blank" rel="external">Configure-with-host-target</a></li>
 <li><a href="https://gcc.gnu.org/onlinedocs/gccint/Configure-Terms.html" target="_blank" rel="external">GCC Configure Term</a></li>
@@ -212,8 +215,8 @@ But <span class="keyword">the</span> gcc will generate <span class="keyword">the
 <nav id="article-nav">
   
   
-    <a href="/2015/08/02/2015-08-02-change-life/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">向生命探索</div>
+    <a href="/2015/07/28/2015-07-28-ascii-table/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ASCII字符表</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -243,6 +246,26 @@ But <span class="keyword">the</span> gcc will generate <span class="keyword">the
 
 
 
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016-04-05-configure" data-title="编译选项的含义[host, build, target]" data-url="http://sharelittle.com/2016/04/05/2016-04-05-configure/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"805c95a19c90ab74fe75b5709e629a59"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
@@ -306,29 +329,13 @@ But <span class="keyword">the</span> gcc will generate <span class="keyword">the
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/AIR/" style="font-size: 10px;">AIR</a> <a href="/tags/ASCII-Table/" style="font-size: 10px;">ASCII Table</a> <a href="/tags/ActionScript3/" style="font-size: 10px;">ActionScript3</a> <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Color/" style="font-size: 10px;">Color</a> <a href="/tags/Control-Char/" style="font-size: 10px;">Control Char</a> <a href="/tags/HSB/" style="font-size: 10px;">HSB</a> <a href="/tags/HSV/" style="font-size: 10px;">HSV</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/OOP/" style="font-size: 10px;">OOP</a> <a href="/tags/RGB/" style="font-size: 10px;">RGB</a> <a href="/tags/RYB/" style="font-size: 10px;">RYB</a> <a href="/tags/anti-debugger/" style="font-size: 10px;">anti debugger</a> <a href="/tags/code-sign/" style="font-size: 10px;">code sign</a> <a href="/tags/cross-compile/" style="font-size: 10px;">cross compile</a> <a href="/tags/debuger-调试/" style="font-size: 10px;">debuger 调试</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/kext/" style="font-size: 10px;">kext</a> <a href="/tags/osx/" style="font-size: 15px;">osx</a> <a href="/tags/remote-远程/" style="font-size: 10px;">remote 远程</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/名言/" style="font-size: 10px;">名言</a> <a href="/tags/探索/" style="font-size: 10px;">探索</a> <a href="/tags/生命/" style="font-size: 10px;">生命</a> <a href="/tags/色彩空间/" style="font-size: 10px;">色彩空间</a>
+    				<a href="/tags/AIR/" style="font-size: 10px;">AIR</a> <a href="/tags/ASCII-Table/" style="font-size: 10px;">ASCII Table</a> <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Color/" style="font-size: 10px;">Color</a> <a href="/tags/Control-Char/" style="font-size: 10px;">Control Char</a> <a href="/tags/HSB/" style="font-size: 10px;">HSB</a> <a href="/tags/HSV/" style="font-size: 10px;">HSV</a> <a href="/tags/RGB/" style="font-size: 10px;">RGB</a> <a href="/tags/RYB/" style="font-size: 10px;">RYB</a> <a href="/tags/anti-debugger/" style="font-size: 10px;">anti debugger</a> <a href="/tags/code-sign/" style="font-size: 10px;">code sign</a> <a href="/tags/cross-compile/" style="font-size: 10px;">cross compile</a> <a href="/tags/debuger-调试/" style="font-size: 10px;">debuger 调试</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/kext/" style="font-size: 10px;">kext</a> <a href="/tags/osx/" style="font-size: 15px;">osx</a> <a href="/tags/remote-远程/" style="font-size: 10px;">remote 远程</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/色彩空间/" style="font-size: 10px;">色彩空间</a>
     			</div>
     	</section>
     
 
     
     	<section class="tools-section tools-section-friends">
-  		
-  			<div class="friends-wrap" id="js-friends">
-  			
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接1</a>
-  	        
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
-  	        
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
-  	        
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
-  	        
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
-  	        
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
-  	        
-  	        </div>
   		
     	</section>
     

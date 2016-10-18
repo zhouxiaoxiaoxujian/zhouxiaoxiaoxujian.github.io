@@ -12,7 +12,7 @@
 安装ios8.4 SDK中的debugserver到iPhone上。
 编写entitlements.plist配置文件。
 
-ent">
+123">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ios远程调试">
 <meta property="og:url" content="http://sharelittle.com/2015/07/26/2015-07-26-debug-on-ios/index.html">
@@ -23,8 +23,8 @@ ent">
 安装ios8.4 SDK中的debugserver到iPhone上。
 编写entitlements.plist配置文件。
 
-ent">
-<meta property="og:updated_time" content="2016-10-15T08:42:59.000Z">
+123">
+<meta property="og:updated_time" content="2016-10-17T02:12:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ios远程调试">
 <meta name="twitter:description" content="安装debugserverios默认是无法通过lldb调试的，默认只能通过xcode连接调试，有时候很不方便，能不能通过lldb远程连接调试呢？答案是可以的。下面以ios8.4为例，详细说明具体配置过程:
@@ -33,7 +33,7 @@ ent">
 安装ios8.4 SDK中的debugserver到iPhone上。
 编写entitlements.plist配置文件。
 
-ent">
+123">
   
     <link rel="alternative" href="/atom.xml" title="Jian Xu&#39; Blog" type="application/atom+xml">
   
@@ -185,7 +185,7 @@ ent">
 <li>安装ios8.4 SDK中的debugserver到iPhone上。</li>
 <li>编写entitlements.plist配置文件。</li>
 </ol>
-<figure class="highlight xml"><figcaption><span>entitlements.plist</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line"><span class="meta">&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/ PropertyList-1.0.dtd"&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">plist</span> <span class="attr">version</span>=<span class="string">"1.0"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>com.apple.springboard.debugapplications<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>run-unsigned-code<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>get-task-allow<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>task_for_pid-allow<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span> </div><div class="line"><span class="tag">&lt;/<span class="name">plist</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line"><span class="meta">&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/ PropertyList-1.0.dtd"&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">plist</span> <span class="attr">version</span>=<span class="string">"1.0"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>com.apple.springboard.debugapplications<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>run-unsigned-code<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>get-task-allow<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>task_for_pid-allow<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span> </div><div class="line"><span class="tag">&lt;/<span class="name">plist</span>&gt;</span></div></pre></td></tr></table></figure>
 <ol>
 <li>使用codesign签名。</li>
 </ol>

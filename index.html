@@ -120,6 +120,72 @@
       <div class="body-wrap">
         
   
+    <article id="post-read-lua-source" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/23/read-lua-source/">怎么阅读lua源码</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong> Recommended reading order </strong></p>
+<ul>
+<li>lmathlib.c, lstrlib.c: get familiar with the external C API. Don’t bother with the pattern matcher though. Just the easy functions.</li>
+<li>lapi.c: Check how the API is implemented internally. Only skim this to get a feeling for the code. Cross-reference to lua.h and luaconf.h as needed.</li>
+<li>lobject.h: tagged values and object representation. skim through this first. you’ll want to keep a window with this file open all the time.</li>
+<li>lstate.h: state objects. ditto.</li>
+<li>lopcodes.h: bytecode instruction format and opcode definitions. easy.</li>
+<li>lvm.c: scroll down to luaV_execute, the main interpreter loop. see how all of the instructions are implemented. skip the details for now. reread later.</li>
+<li>ldo.c: calls, stacks, exceptions, coroutines. tough read.</li>
+<li>lstring.c: string interning. cute, huh?</li>
+<li>ltable.c: hash tables and arrays. tricky code.</li>
+<li>ltm.c: metamethod handling, reread all of lvm.c now.<br>You may want to reread lapi.c now.</li>
+<li>ldebug.c: surprise waiting for you. abstract interpretation is used to find object names for tracebacks. does bytecode verification, too.</li>
+<li>lparser.c, lcode.c: recursive descent parser, targetting a register-based VM. start from chunk() and work your way through. read the expression parser and the code generator parts last.</li>
+<li>lgc.c: incremental garbage collector. take your time.</li>
+</ul>
+<p>Read all the other files as you see references to them. Don’t let your stack get too deep though.<br>If you’re done before X-Mas and understood all of it, you’re good. The information density of the code is rather high.</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/10/23/read-lua-source/" class="archive-article-date">
+  	<time datetime="2016-10-23T04:35:39.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-23</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lua/">lua</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-2016-04-05-configure" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -670,56 +736,6 @@
 
 
   
-    <article id="post-2013-09-17-p12_cerificate" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/09/17/2013-09-17-p12_cerificate/">Getting your keystore from a p12 cerificate</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>keytool -importkeystore -srckeystore savagelook<span class="class">.p12</span> -destkeystore savagelook<span class="class">.keystore</span> -srcstoretype pkcs12
-</code></pre>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2013/09/17/2013-09-17-p12_cerificate/" class="archive-article-date">
-  	<time datetime="2013-09-16T16:01:09.000Z" itemprop="datePublished"><i class="icon-clock"></i>2013-09-17</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -783,7 +799,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/AIR/" style="font-size: 10px;">AIR</a> <a href="/tags/ASCII-Table/" style="font-size: 10px;">ASCII Table</a> <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Color/" style="font-size: 10px;">Color</a> <a href="/tags/Control-Char/" style="font-size: 10px;">Control Char</a> <a href="/tags/HSB/" style="font-size: 10px;">HSB</a> <a href="/tags/HSV/" style="font-size: 10px;">HSV</a> <a href="/tags/RGB/" style="font-size: 10px;">RGB</a> <a href="/tags/RYB/" style="font-size: 10px;">RYB</a> <a href="/tags/anti-debugger/" style="font-size: 10px;">anti debugger</a> <a href="/tags/code-sign/" style="font-size: 10px;">code sign</a> <a href="/tags/cross-compile/" style="font-size: 10px;">cross compile</a> <a href="/tags/debuger-调试/" style="font-size: 10px;">debuger 调试</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/kext/" style="font-size: 10px;">kext</a> <a href="/tags/osx/" style="font-size: 15px;">osx</a> <a href="/tags/remote-远程/" style="font-size: 10px;">remote 远程</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/色彩空间/" style="font-size: 10px;">色彩空间</a>
+    				<a href="/tags/AIR/" style="font-size: 10px;">AIR</a> <a href="/tags/ASCII-Table/" style="font-size: 10px;">ASCII Table</a> <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Color/" style="font-size: 10px;">Color</a> <a href="/tags/Control-Char/" style="font-size: 10px;">Control Char</a> <a href="/tags/HSB/" style="font-size: 10px;">HSB</a> <a href="/tags/HSV/" style="font-size: 10px;">HSV</a> <a href="/tags/RGB/" style="font-size: 10px;">RGB</a> <a href="/tags/RYB/" style="font-size: 10px;">RYB</a> <a href="/tags/anti-debugger/" style="font-size: 10px;">anti debugger</a> <a href="/tags/code-sign/" style="font-size: 10px;">code sign</a> <a href="/tags/cross-compile/" style="font-size: 10px;">cross compile</a> <a href="/tags/debuger-调试/" style="font-size: 10px;">debuger 调试</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/kext/" style="font-size: 10px;">kext</a> <a href="/tags/lua/" style="font-size: 10px;">lua</a> <a href="/tags/osx/" style="font-size: 15px;">osx</a> <a href="/tags/remote-远程/" style="font-size: 10px;">remote 远程</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/色彩空间/" style="font-size: 10px;">色彩空间</a>
     			</div>
     	</section>
     

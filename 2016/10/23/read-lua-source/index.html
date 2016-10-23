@@ -4,14 +4,27 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2016/4 | Jian Xu&#39; Blog</title>
+  <title>怎么阅读lua源码 | Jian Xu&#39; Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Jian Xu' Blog">
-<meta property="og:url" content="http://sharelittle.com/archives/2016/04/index.html">
+  <meta name="description" content="Recommended reading order 
+
+lmathlib.c, lstrlib.c: get familiar with the external C API. Don’t bother with the pattern matcher though. Just the easy functions.
+lapi.c: Check how the API is implemente">
+<meta property="og:type" content="article">
+<meta property="og:title" content="怎么阅读lua源码">
+<meta property="og:url" content="http://sharelittle.com/2016/10/23/read-lua-source/index.html">
 <meta property="og:site_name" content="Jian Xu' Blog">
+<meta property="og:description" content="Recommended reading order 
+
+lmathlib.c, lstrlib.c: get familiar with the external C API. Don’t bother with the pattern matcher though. Just the easy functions.
+lapi.c: Check how the API is implemente">
+<meta property="og:updated_time" content="2016-10-23T04:38:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jian Xu' Blog">
+<meta name="twitter:title" content="怎么阅读lua源码">
+<meta name="twitter:description" content="Recommended reading order 
+
+lmathlib.c, lstrlib.c: get familiar with the external C API. Don’t bother with the pattern matcher though. Just the easy functions.
+lapi.c: Check how the API is implemente">
   
     <link rel="alternative" href="/atom.xml" title="Jian Xu&#39; Blog" type="application/atom+xml">
   
@@ -118,54 +131,120 @@
 </nav>
 
       <div class="body-wrap">
+        <article id="post-read-lua-source" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
         
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/05/2016-04-05-configure/" class="archive-article-date">
-  	<time datetime="2016-04-05T10:29:49.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-04-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/04/05/2016-04-05-configure/">编译选项的含义[host, build, target]</a>
+    <h1 class="article-title" itemprop="name">
+      怎么阅读lua源码
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong> Recommended reading order </strong></p>
+<ul>
+<li>lmathlib.c, lstrlib.c: get familiar with the external C API. Don’t bother with the pattern matcher though. Just the easy functions.</li>
+<li>lapi.c: Check how the API is implemented internally. Only skim this to get a feeling for the code. Cross-reference to lua.h and luaconf.h as needed.</li>
+<li>lobject.h: tagged values and object representation. skim through this first. you’ll want to keep a window with this file open all the time.</li>
+<li>lstate.h: state objects. ditto.</li>
+<li>lopcodes.h: bytecode instruction format and opcode definitions. easy.</li>
+<li>lvm.c: scroll down to luaV_execute, the main interpreter loop. see how all of the instructions are implemented. skip the details for now. reread later.</li>
+<li>ldo.c: calls, stacks, exceptions, coroutines. tough read.</li>
+<li>lstring.c: string interning. cute, huh?</li>
+<li>ltable.c: hash tables and arrays. tricky code.</li>
+<li>ltm.c: metamethod handling, reread all of lvm.c now.<br>You may want to reread lapi.c now.</li>
+<li>ldebug.c: surprise waiting for you. abstract interpretation is used to find object names for tracebacks. does bytecode verification, too.</li>
+<li>lparser.c, lcode.c: recursive descent parser, targetting a register-based VM. start from chunk() and work your way through. read the expression parser and the code generator parts last.</li>
+<li>lgc.c: incremental garbage collector. take your time.</li>
+</ul>
+<p>Read all the other files as you see references to them. Don’t let your stack get too deep though.<br>If you’re done before X-Mas and understood all of it, you’re good. The information density of the code is rather high.</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/10/23/read-lua-source/" class="archive-article-date">
+  	<time datetime="2016-10-23T04:35:39.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-23</time>
+</a>
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cross-compile/">cross compile</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lua/">lua</a></li></ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/04/05/2016-04-05-configure/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">编译选项的含义[host, build, target]</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="read-lua-source" data-title="怎么阅读lua源码" data-url="http://sharelittle.com/2016/10/23/read-lua-source/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"sharelittle"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 
       </div>
@@ -188,8 +267,8 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

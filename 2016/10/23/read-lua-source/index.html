@@ -6,25 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>怎么阅读lua源码 | Jian Xu&#39; Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Recommended reading order 
+  <meta name="description" content="Recommended reading order
 
 lmathlib.c, lstrlib.c: get familiar with the external C API. Don’t bother with the pattern matcher though. Just the easy functions.
-lapi.c: Check how the API is implemente">
+lapi.c: Check how the API is implemented">
 <meta property="og:type" content="article">
 <meta property="og:title" content="怎么阅读lua源码">
 <meta property="og:url" content="http://sharelittle.com/2016/10/23/read-lua-source/index.html">
 <meta property="og:site_name" content="Jian Xu' Blog">
-<meta property="og:description" content="Recommended reading order 
+<meta property="og:description" content="Recommended reading order
 
 lmathlib.c, lstrlib.c: get familiar with the external C API. Don’t bother with the pattern matcher though. Just the easy functions.
-lapi.c: Check how the API is implemente">
-<meta property="og:updated_time" content="2016-10-23T04:38:43.000Z">
+lapi.c: Check how the API is implemented">
+<meta property="og:updated_time" content="2016-10-23T05:05:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="怎么阅读lua源码">
-<meta name="twitter:description" content="Recommended reading order 
+<meta name="twitter:description" content="Recommended reading order
 
 lmathlib.c, lstrlib.c: get familiar with the external C API. Don’t bother with the pattern matcher though. Just the easy functions.
-lapi.c: Check how the API is implemente">
+lapi.c: Check how the API is implemented">
   
     <link rel="alternative" href="/atom.xml" title="Jian Xu&#39; Blog" type="application/atom+xml">
   
@@ -149,7 +149,7 @@ lapi.c: Check how the API is implemente">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong> Recommended reading order </strong></p>
+        <p><strong>Recommended reading order</strong></p>
 <ul>
 <li>lmathlib.c, lstrlib.c: get familiar with the external C API. Don’t bother with the pattern matcher though. Just the easy functions.</li>
 <li>lapi.c: Check how the API is implemented internally. Only skim this to get a feeling for the code. Cross-reference to lua.h and luaconf.h as needed.</li>
@@ -166,6 +166,12 @@ lapi.c: Check how the API is implemente">
 <li>lgc.c: incremental garbage collector. take your time.</li>
 </ul>
 <p>Read all the other files as you see references to them. Don’t let your stack get too deep though.<br>If you’re done before X-Mas and understood all of it, you’re good. The information density of the code is rather high.</p>
+<hr>
+<p>Reference:</p>
+<ol>
+<li><a href="https://redd.it/63hth" target="_blank" rel="external">Recommended reading order</a></li>
+<li><a href="http://www.lua.org/source/5.1/" target="_blank" rel="external"> Online Lua 5.1 source code browser </a></li>
+</ol>
 
       
     </div>
